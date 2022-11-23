@@ -4,9 +4,8 @@ const capitalize = (str) => {
   const strTwo = strNew[1];
   if (!strTwo) {
     return `${strOne.charAt(0).toUpperCase() + strOne.slice(1)}`;
-  } else {
-    return `${strOne.charAt(0).toUpperCase() + strOne.slice(1)} ${strTwo.charAt(0).toUpperCase() + strTwo.slice(1)}`;
   }
+  return `${strOne.charAt(0).toUpperCase() + strOne.slice(1)} ${strTwo.charAt(0).toUpperCase() + strTwo.slice(1)}`;
 };
 
 export default capitalize;

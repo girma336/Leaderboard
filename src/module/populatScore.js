@@ -1,6 +1,6 @@
 const mainContainer = document.querySelector('.board-container');
 
-const  populateAllScore = (list) => {
+const populateAllScore = (list) => {
   mainContainer.innerHTML = '';
   const newList = list.map((item) => {
     const newDiv = document.createElement('div');
@@ -16,6 +16,6 @@ const  populateAllScore = (list) => {
   newList.forEach((element) => {
     mainContainer.appendChild(element);
   });
-}
+};
 
 export default populateAllScore;
