@@ -15,10 +15,10 @@ body {
 header {
   position: absolute;
   left: 30px;
-  top: 50px;
+  top: 10px;
   transition: 1s;
   box-shadow: 8px 8px 16px rgb(25, 119, 44);
-  padding: 10px;
+  padding: 8px;
   border: 2px solid #fff;
   background-color: #fff;
 }
