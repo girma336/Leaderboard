@@ -1,39 +1,23 @@
 import './style.css';
 import './student.jpg';
-import populateScore from './module/populatScore.js';
+import Scores from './module/StudeScore.js';
+import postData from './module/sendingData.js';
+import capitalize from './module/stringCap.js';
+import getDataScores from './module/getingData.js';
 
-const scoreList = [
-  {
-    user: 'John Doe',
-    score: 42,
-  },
-  {
-    user: 'Peter Parker',
-    score: 35,
-  },
-  {
-    user: 'Wonder Woman',
-    score: 50,
-  },
-];
-const mainContainer = document.querySelector('.board-container');
-const populateAllScore = () => {
-  mainContainer.innerHTML = '';
+const form = document.querySelector('.form-container');
+const refreshBtn = document.querySelector('.ref-btn');
+const nameValue = document.querySelector('.your-name');
+const scoreValue = document.querySelector('.your-score');
 
-  scoreList.forEach((data) => {
-    populateScore(data);
-  });
-};
-
-const chechPromises = () => new Promise((resolve) => {
-  if (scoreList) {
-    resolve();
-  }
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const newData = new Scores(capitalize(nameValue.value), scoreValue.value);
+  postData(newData);
+  nameValue.value = '';
+  scoreValue.value = '';
 });
 
-async function init() {
-  await chechPromises();
-  populateAllScore();
-}
-
-init();
+refreshBtn.addEventListener('click', () => {
+  getDataScores();
+});
