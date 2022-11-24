@@ -107,6 +107,48 @@ input {
   font-size: 16px;
 }
 
+.suc-green {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 300px;
+  background-color: green;
+  z-index: 8;
+  height: 100px;
+  border-radius: 15px;
+  border: 1px solid green;
+}
+
+.suc i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  color: red;
+  float: right;
+  margin-top: 10px;
+  margin-right: 24px;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.suc p {
+  padding-top: 40px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.closeTab {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
   header {
     position: fixed;
