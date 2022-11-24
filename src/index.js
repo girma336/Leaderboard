@@ -5,7 +5,11 @@ import postData from './module/sendingData.js';
 import capitalize from './module/stringCap.js';
 import getDataScores from './module/getingData.js';
 import succesFull from './module/succesfull.js';
+import Game from './module/stuGame.js';
+import createGame from './module/creatGame.js';
 
+const game = new Game('begera');
+createGame(game);
 const closeNew = document.querySelector('.successefull');
 
 const form = document.querySelector('.form-container');
@@ -22,6 +26,7 @@ form.addEventListener('submit', (event) => {
   closeNew.classList.add('suc-green');
   closeBtn.addEventListener('click', () => {
     closeNew.classList.add('closeTab');
+    window.location.reload();
   });
   nameValue.value = '';
   scoreValue.value = '';
@@ -30,5 +35,3 @@ form.addEventListener('submit', (event) => {
 refreshBtn.addEventListener('click', () => {
   getDataScores();
 });
-
-
